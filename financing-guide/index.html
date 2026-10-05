@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financing Guide / Marina Soicher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --pearl: #FAF8F5;
+    --pearl-deep: #F2EDE5;
+    --pearl-warm: #ECE4D4;
+    --cacao: #2E1B14;
+    --cacao-soft: #4A3329;
+    --cacao-muted: #7A6359;
+    --espresso: #180D00;
+    --sky: #ABCDDD;
+    --sky-light: #DCE9F0;
+    --sky-deep: #7FA8BD;
+    --honey: #CEA435;
+    --honey-light: #F2E5BE;
+    --honey-deep: #A8851F;
+    --rule: #DDD2BF;
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--cacao);
+    background: var(--pearl);
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 64px 80px;
+  }
+
+  @media print {
+    body { padding: 36px; font-size: 13px; background: #fff; }
+    .no-print { display: none; }
+    h2 { page-break-before: always; }
+    .cover, h2:first-of-type { page-break-before: avoid; }
+    .step, .tool-card, .file-card, .callout, .code-block, .phase, .level-card { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 700px) {
+    body { padding: 24px 18px 60px; }
+
+    /* Cover */
+    .cover { padding: 24px 0 16px; margin-bottom: 16px; }
+    .cover .eyebrow { font-size: 10px; letter-spacing: 3px; margin-bottom: 18px; }
+    .cover h1 { font-size: 36px; letter-spacing: 0.5px; line-height: 1.1; margin-bottom: 16px; }
+    .cover .version { font-size: 9px; letter-spacing: 2.5px; margin-bottom: 18px; }
+    .cover .byline { font-size: 10px; letter-spacing: 2px; margin-bottom: 16px; }
+    .cover .subtitle { font-size: 17px; margin-bottom: 18px; line-height: 1.45; }
+    br.desktop-only { display: none; }
+    .cover .pills { gap: 6px; margin-bottom: 16px; }
+    .cover .promise { font-size: 15px; }
+
+    /* Device note */
+    .device-note { padding: 14px 16px; flex-direction: column; gap: 8px; }
+    .device-note-icon { font-size: 22px; }
+    .device-note-body strong { font-size: 16px; }
+
+    /* TOC */
+    .toc { padding: 22px 22px; margin-bottom: 36px; }
+    .toc ol { columns: 1; column-gap: 0; }
+    .toc li { font-size: 15px; gap: 10px; margin-bottom: 8px; }
+
+    /* Typography */
+    h2 { font-size: 10px; letter-spacing: 3px; margin: 36px 0 14px; }
+    h3 { font-size: 22px; margin: 22px 0 8px; }
+    h4 { font-size: 11.5px; }
+    p { font-size: 15.5px; }
+
+    /* Lead */
+    .lead { font-size: 17px; padding-left: 16px; }
+
+    /* Grids that should stack on mobile */
+    .tool-grid { grid-template-columns: 1fr; gap: 12px; }
+    .level-card { grid-template-columns: 1fr; gap: 10px; }
+    .legend { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Cards */
+    .tool-card { padding: 18px 18px; }
+    .tool-card .name { font-size: 24px; }
+    .file-card { padding: 18px 18px; }
+    .file-card .file-purpose { font-size: 20px; }
+
+    /* Phase blocks */
+    .phase { padding: 16px 18px; }
+    .phase-header { gap: 10px; margin-bottom: 12px; }
+    .phase-title { font-size: 18px; }
+
+    /* Steps */
+    .step { gap: 12px; margin-bottom: 16px; }
+    .step-num { width: 32px; height: 32px; font-size: 13px; }
+    .step-body .action { padding: 10px 14px; font-size: 12px; }
+
+    /* Callouts */
+    .callout { padding: 14px 16px; margin: 16px 0; }
+    .callout p { font-size: 15px; }
+
+    /* Folder tree & code blocks */
+    .folder-tree { padding: 16px 18px; font-size: 12px; line-height: 1.8; }
+    .code-block { padding: 14px 16px; font-size: 11px; }
+    .code-block.compact { padding: 12px 14px; font-size: 11px; }
+
+    /* Tables: tighten padding, smaller font */
+    table { font-size: 14px; }
+    th { padding: 10px 12px; font-size: 9.5px; letter-spacing: 1.2px; }
+    td { padding: 11px 12px; line-height: 1.5; }
+
+    /* Next-step card */
+    .next-step { padding: 24px 22px; margin: 28px 0; }
+    .next-step h3 { font-size: 26px; margin-bottom: 12px; }
+    .next-step p { font-size: 15px; line-height: 1.65; }
+  }
+
+  /* COVER */
+  .cover {
+    text-align: center;
+    padding: 44px 0 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cover::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: var(--sky-deep);
+    margin: 16px auto 0;
+  }
+  .cover .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .cover h1 {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 58px;
+    font-weight: 400;
+    color: var(--cacao);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .cover .version {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    border: 1px solid var(--honey-deep);
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .cover .byline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cacao-soft);
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .cover .subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    color: var(--cacao-soft);
+    margin-bottom: 24px;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+  .cover .pills {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .pill {
+    background: var(--cacao);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+  .pill.sky { background: var(--sky-deep); }
+  .pill.outline {
+    background: transparent;
+    border: 1px solid var(--cacao);
+    color: var(--cacao);
+  }
+  .cover .promise {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    color: var(--cacao-soft);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* TOC */
+  .device-note {
+    background: var(--honey-light);
+    border: 1px solid var(--honey);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 0 0 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .device-note-icon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .device-note-body strong {
+    display: block;
+    font-family: 'Forum', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+  .device-note-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cacao-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .toc {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 36px;
+    margin: 0 0 48px;
+    position: relative;
+  }
+  .toc::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 24px;
+    width: 60px;
+    height: 3px;
+    background: var(--sky);
+  }
+  .toc h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: var(--sky-deep);
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+  }
+  .toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 36px;
+  }
+  .toc li {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    color: var(--cacao);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    display: flex;
+    gap: 14px;
+    break-inside: avoid;
+  }
+  .toc li .num {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--honey-deep);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    min-width: 26px;
+    padding-top: 3px;
+  }
+  .toc li .later {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    background: var(--sky-light);
+    padding: 1px 7px;
+    border-radius: 100px;
+    margin-left: 6px;
+    font-weight: 500;
+    align-self: center;
+  }
+
+  /* TYPOGRAPHY */
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin: 48px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 600;
+  }
+  h3 {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin: 28px 0 10px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+  }
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cacao);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 18px 0 8px;
+  }
+  p {
+    margin-bottom: 12px;
+    color: var(--cacao);
+    font-size: 16px;
+  }
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--cacao);
+  }
+  strong { color: var(--cacao); font-weight: 600; }
+  em { color: var(--cacao-soft); font-style: italic; }
+
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    background: var(--pearl-deep);
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--honey-deep);
+    font-weight: 500;
+  }
+
+  /* LEAD */
+  .lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--cacao);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 22px;
+    padding-left: 22px;
+    border-left: 2px solid var(--sky);
+  }
+
+  /* TOOL CARDS */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0 28px;
+  }
+  .tool-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 22px 22px;
+    background: #FFFFFF;
+    position: relative;
+  }
+  .tool-card.primary {
+    border-color: var(--sky);
+    background: var(--sky-light);
+  }
+  .tool-card .tool-mark {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .tool-card .name {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--cacao);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .tool-card .tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .tool-card p {
+    font-size: 15px;
+    color: var(--cacao-soft);
+    line-height: 1.65;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* FILE CARDS */
+  .file-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 22px 26px;
+    background: #FFFFFF;
+    margin: 16px 0;
+    position: relative;
+  }
+  .file-card.optional {
+    background: var(--pearl-deep);
+    border-style: dashed;
+  }
+  .file-card .file-name {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--honey-deep);
+    background: var(--pearl-deep);
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .file-card.optional .file-name {
+    background: #FFFFFF;
+  }
+  .file-card .badge-optional {
+    display: inline-block;
+    background: var(--sky-light);
+    color: var(--sky-deep);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    font-weight: 600;
+    vertical-align: 3px;
+  }
+  .file-card .file-purpose {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+  .file-card .file-desc {
+    font-size: 15px;
+    color: var(--cacao-soft);
+    margin-bottom: 16px;
+    line-height: 1.65;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .file-card .file-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--honey-deep);
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* STEPS */
+  .steps { margin: 18px 0; }
+  .step {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--cacao);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .step-num.sky { background: var(--sky-deep); }
+  .step-num.honey { background: var(--honey); }
+  .step-num.outline {
+    background: var(--pearl);
+    color: var(--cacao);
+    border: 1.5px solid var(--cacao);
+  }
+  .step-body { flex: 1; }
+  .step-body h4 { margin-top: 0; margin-bottom: 6px; }
+  .step-body p { margin-bottom: 8px; font-size: 15px; }
+  .step-body .action {
+    background: var(--sky-light);
+    border-left: 2px solid var(--sky-deep);
+    padding: 12px 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--cacao);
+    border-radius: 0 4px 4px 0;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .step-body .action strong {
+    display: block;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  /* CALLOUTS */
+  .callout {
+    border-left: 2px solid var(--sky-deep);
+    background: var(--sky-light);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout.honey {
+    border-left-color: var(--honey-deep);
+    background: var(--honey-light);
+  }
+  .callout.cacao {
+    border-left-color: var(--cacao);
+    background: var(--pearl-deep);
+  }
+  .callout > strong:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sky-deep);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .callout.honey > strong:first-child { color: var(--honey-deep); }
+  .callout.cacao > strong:first-child { color: var(--cacao); }
+  .callout p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .callout p + p { margin-top: 10px; }
+
+  /* LEVEL CARD - for beginner vs seasoned routing */
+  .level-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .level-box {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+    background: #FFFFFF;
+  }
+  .level-box.beginner { border-left: 3px solid var(--sky-deep); }
+  .level-box.seasoned { border-left: 3px solid var(--honey-deep); }
+  .level-box .level-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .level-box.beginner .level-label { color: var(--sky-deep); }
+  .level-box.seasoned .level-label { color: var(--honey-deep); }
+  .level-box h4 {
+    font-family: 'Forum', serif;
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.3px;
+  }
+  .level-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cacao-soft);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* PHASE BLOCKS */
+  .phase {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 14px 0;
+    background: #FFFFFF;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .phase-badge {
+    background: var(--sky-deep);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .phase-badge.honey { background: var(--honey); color: var(--cacao); }
+  .phase-title {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--cacao);
+    letter-spacing: 0.3px;
+  }
+  .phase ul { margin: 0; }
+  .phase li { font-size: 15px; }
+
+  /* FOLDER TREE */
+  .folder-tree {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background: var(--espresso);
+    color: #ECE4D4;
+    padding: 22px 26px;
+    border-radius: 4px;
+    margin: 16px 0;
+    line-height: 1.9;
+  }
+  .folder-tree .folder { color: var(--honey); font-weight: 600; }
+  .folder-tree .file { color: var(--sky); }
+  .folder-tree .comment { color: #8B7E70; font-style: italic; }
+
+  /* CODE BLOCKS */
+  .code-block {
+    background: var(--espresso);
+    color: #ECE4D4;
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 14px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 11.5px;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  .code-block .label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .code-block.compact { font-size: 12px; padding: 14px 20px; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+  }
+  th {
+    background: var(--cacao);
+    color: var(--pearl);
+    padding: 13px 18px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    line-height: 1.6;
+    background: #FFFFFF;
+  }
+  tr:nth-child(even) td { background: var(--pearl-deep); }
+
+  /* DIVIDER */
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 36px 0;
+  }
+  .ornament {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--sky-deep);
+    font-family: 'Forum', serif;
+    font-size: 22px;
+    letter-spacing: 14px;
+  }
+
+  /* NEXT-STEP CARD */
+  .next-step {
+    background: var(--espresso);
+    color: var(--pearl);
+    border-radius: 4px;
+    padding: 32px 36px;
+    margin: 36px 0;
+    position: relative;
+  }
+  .next-step .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .next-step h3 {
+    font-family: 'Forum', serif;
+    color: var(--pearl);
+    font-size: 34px;
+    margin: 0 0 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+  }
+  .next-step p {
+    color: #DDD2BF;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .next-step ul { padding-left: 24px; }
+  .next-step li {
+    color: #DDD2BF;
+    font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .next-step strong { color: var(--pearl); }
+
+  /* SCREENSHOT FRAME & LEGEND */
+  .screenshot-frame {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px;
+    margin: 22px 0 10px;
+    box-shadow: 0 2px 16px rgba(46, 27, 20, 0.06);
+    text-align: center;
+  }
+  .screenshot-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+  .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+  .legend-item {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    background: #FFFFFF;
+  }
+  .legend-item .legend-label {
+    font-family: 'Forum', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--rule);
+    letter-spacing: 0.4px;
+  }
+  .legend-item .legend-label.chat { border-bottom-color: var(--honey); }
+  .legend-item .legend-label.cowork { border-bottom-color: var(--sky-deep); }
+  .legend-item .legend-label.code { border-bottom-color: var(--cacao); }
+  .legend-item p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--cacao-soft);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .footer-logo {
+    margin-bottom: 8px;
+  }
+  .footer-logo img {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+  }
+  .footer-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--cacao-muted);
+    margin-top: 10px;
+  }
+  .footer-meta strong { color: var(--sky-deep); font-weight: 600; }
+
+  /* RESOURCE LINK CARDS (added for this hub: the whole card is the link) */
+  .resource {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 12px 0;
+    background: #FFFFFF;
+    text-decoration: none;
+    color: var(--cacao);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .resource:hover { border-color: var(--sky-deep); background: var(--sky-light); }
+  .resource-body { flex: 1; }
+  .resource-name {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+  }
+  .resource-desc {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--cacao-soft);
+  }
+  .resource-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .resource-open {
+    flex-shrink: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--pearl);
+    background: var(--cacao);
+    padding: 9px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .resource:hover .resource-open { background: var(--sky-deep); }
+  @media (max-width: 700px) {
+    .resource { padding: 16px 16px; gap: 12px; }
+    .resource-name { font-size: 19px; }
+    .resource-desc { font-size: 14.5px; }
+    .resource-open { padding: 8px 12px; font-size: 9px; letter-spacing: 1.5px; }
+  }
+
+  /* Launch Guide additions */
+  .link-group { margin: 18px 0 8px; }
+  .link-group h4 { margin-bottom: 8px; }
+  .link-group ul { padding-left: 22px; margin: 0; }
+  .link-group li { margin-bottom: 4px; }
+  .link-group a, p a { color: var(--sky-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .toc li a { color: inherit; text-decoration: none; }
+  .toc li a:hover { color: var(--sky-deep); }
+
+  /* Financing Guide additions */
+  .score-tag {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    background: var(--sky-light);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 600;
+    margin-left: 8px;
+    vertical-align: 2px;
+  }
+  td a { color: var(--sky-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .note { font-size: 14.5px; color: var(--cacao-soft); font-style: italic; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     FINANCING GUIDE (replaces the "Step 1 | Financing Doc" Google Doc)
+     Linked from the Launch Guide; sent after the 1:1 Business Set-Up Call.
+     Styled to match launch-guide/index.html.
+     Credit builder link = the sales-call version (Marina 10/5: the newest
+     one, not the YFM event version).
+     v1.0 (2026-10-05): first draft for Naomi's review.
+============================================================ -->
+
+<div class="cover">
+  <div class="eyebrow">Marina's Team</div>
+  <h1>Financing Guide</h1>
+  <div class="version">v1.0</div>
+  <div class="byline">By Marina Soicher</div>
+  <p class="subtitle">Our go-to financing resources for starting your business, sorted by country and credit score. Find your country, find your starting point, and work through it with your coach.</p>
+</div>
+
+<div class="device-note">
+  <div class="device-note-icon">&#9733;</div>
+  <div class="device-note-body">
+    <strong>Bookmark this page</strong>
+    <p>This guide is always being updated, so come back to this link instead of saving a copy. Tap your country below to jump straight to it.</p>
+  </div>
+</div>
+
+<div class="toc">
+  <h3>Choose your region</h3>
+  <ol>
+    <li><span class="num">01</span> <a href="#united-states">United States</a></li>
+    <li><span class="num">02</span> <a href="#canada">Canada</a></li>
+    <li><span class="num">03</span> <a href="#australia">Australia</a></li>
+    <li><span class="num">04</span> <a href="#europe">Europe (UK &amp; Ireland)</a></li>
+    <li><span class="num">05</span> <a href="#credit-builder">Credit builder (worldwide)</a></li>
+  </ol>
+</div>
+
+
+<h2 id="united-states">01 / United States</h2>
+
+<p class="lead">Start with your credit score. It tells you which section below is the best fit.</p>
+
+<table>
+  <tr><th>Your credit score</th><th>Start here</th></tr>
+  <tr><td>670 to 850</td><td><a href="#us-cards">Credit card referrals</a></td></tr>
+  <tr><td>630 to 719</td><td><a href="#us-loans">Loan referrals &amp; banks</a></td></tr>
+  <tr><td>No credit, or 300 to 689</td><td><a href="#us-building">Credit cards for building credit</a></td></tr>
+  <tr><td>Rebuilding your credit</td><td><a href="#us-rebuilding">Rebuilding credit</a></td></tr>
+</table>
+
+<p class="note">The ranges overlap on purpose. If you sit in two, talk with your coach about which to try first.</p>
+
+<h3>Tips for applying for credit cards</h3>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h4>Apply to two right in a row</h4>
+      <p>Most people need two cards for their full investment, since credit card companies don't tend to give high limits right off the bat. If you wait too long, you might get denied, so apply to one right after the other or at the same time. If you do get denied by one, stop applying immediately.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h4>Our recommendations</h4>
+      <p>For good or excellent credit: Capital One Venture, Chase Freedom, Discover, and then Citi. You also get cash back for spending the whole limit on these, so it's a win-win! And they're all 0% for 12 to 15 months (see the links below).</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h4>Once you're approved, ask for a limit increase</h4>
+      <p>You can call the company and ask for a limit increase if you need one, and they might give it to you. <a href="https://youtu.be/Fhrf74RrexI" target="_blank" rel="noopener noreferrer">This short video</a> explains how to do that. You can also ask them to expedite your card (they shouldn't charge for this) so you don't have to wait as long for it in the mail. We know you're itching to get going, we felt the same way!</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-body">
+      <h4>Talk with your coach</h4>
+      <p>Your coach can give you more credit card application tips based on your situation.</p>
+    </div>
+  </div>
+</div>
+
+<h3 id="us-cards">1. Credit card referrals <span class="score-tag">670 to 850 credit</span></h3>
+
+<div class="link-group">
+  <ul>
+    <li><a href="https://creditcards.wellsfargo.com/0-percent-intro-apr-credit-cards/?sub_channel=WEB&amp;vendor_code=WF&amp;linkloc=FNIR&amp;lang=en&amp;_gl=1*1vdxnvd*_ga*Nzc0NTUyOTM5LjE3MjEzMzA1OTA.*_ga_7JXJJ2JF12*MTcyMzY2MzQ5MC4yLjAuMTcyMzY2MzQ5MC42MC4wLjA." target="_blank" rel="noopener noreferrer">Wells Fargo</a></li>
+    <li><a href="https://www.americanexpress.com/us/credit-cards/category/zero-percent-intro-apr/" target="_blank" rel="noopener noreferrer">AMEX</a> (decision on the spot; for higher credit)</li>
+    <li><a href="https://capital.one/3exQksO" target="_blank" rel="noopener noreferrer">Capital One Venture One</a></li>
+    <li><a href="https://www.discover.com/credit-cards/cash-back/it-card.html" target="_blank" rel="noopener noreferrer">Discover it</a></li>
+    <li><a href="https://www.creditkarma.com/creditcards/explore/i/0-introductory-rate-credit-cards-mbl/?gclid=EAIaIQobChMI0vH7rqia5AIVOB-tBh3aiQzdEAAYASAAEgKZRPD_BwE" target="_blank" rel="noopener noreferrer">Citi Financial</a></li>
+    <li><a href="https://www.bankofamerica.com/credit-cards/#filter" target="_blank" rel="noopener noreferrer">Bank of America</a> (12, 15 and 18 months at 0% interest)</li>
+  </ul>
+</div>
+
+<h3 id="us-loans">2. Loan referrals &amp; banks <span class="score-tag">630 to 719 credit</span></h3>
+
+<p>Speaking with your bank is a great option, since they want to help you as one of their current customers. If you let your bank know the loan is for medical equipment (which is the truth), they can usually get you approved, often for a higher limit. This option is working well for people lately.</p>
+
+<div class="link-group">
+  <ul>
+    <li><a href="https://www.onemainfinancial.com/personal-loans" target="_blank" rel="noopener noreferrer">OneMain Financial</a></li>
+    <li><a href="http://www.upstart.com" target="_blank" rel="noopener noreferrer">Upstart</a> (check your credit and receive personal loans)</li>
+    <li><a href="https://fundwise.com/" target="_blank" rel="noopener noreferrer">Fundwise</a></li>
+    <li><a href="https://www.eazeconsulting.com/apply?cl=B2EFB&amp;ag=3QNXGO6TUI" target="_blank" rel="noopener noreferrer">Eaze Consulting</a> (personal loans)</li>
+    <li><a href="https://www.fiona.com" target="_blank" rel="noopener noreferrer">Fiona</a> (all potential financing options; only viewable in the US)</li>
+  </ul>
+</div>
+
+<h3 id="us-building">3. Credit cards for building credit <span class="score-tag">No credit or 300 to 689</span></h3>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-num sky">1</div>
+    <div class="step-body">
+      <p>Apply for the card that best suits your situation from <a href="https://www.creditcards.com/no-credit/" target="_blank" rel="noopener noreferrer">Best Credit Cards for No Credit</a>.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num sky">2</div>
+    <div class="step-body">
+      <p>Once you're approved, put as many daily purchases on it as you can: food, groceries, gas, your water bill, your phone bill.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num sky">3</div>
+    <div class="step-body">
+      <p>Every two weeks, pay the entire balance off. This builds your credit quickly and gives the companies evidence of on-time payments.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num sky">4</div>
+    <div class="step-body">
+      <p>Every month or so, check your credit score through Credit Karma.</p>
+    </div>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>Your goal</strong>
+  <p>Once we get you to 650 or above, you'll be able to apply for a bigger loan for your quad or trifecta and be more likely to get approved!</p>
+</div>
+
+<h3 id="us-rebuilding">4. Rebuilding credit</h3>
+
+<a class="resource" href="https://marinasoicher.github.io/credit-builder-plan/" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Credit building tool</div>
+    <div class="resource-name">Credit Builder Plan</div>
+    <div class="resource-desc">Our step-by-step plan for raising your credit score so you can get approved for financing. Work through it alongside your coach.</div>
+  </div>
+  <span class="resource-open">Open</span>
+</a>
+
+
+<h2 id="canada">02 / Canada</h2>
+
+<div class="callout honey">
+  <strong>Canadians only</strong>
+  <p>Please send your coach a photo of your driver's license. This helps the government verify it's you when you start this business, and it MUST be submitted with your forms.</p>
+</div>
+
+<h3>1. 0 to 1% interest credit card</h3>
+
+<p>MBNA is the only credit card in Canada with a 0% interest rate, and BMO is a very low (0.99%) interest option. They're both balance transfer cards: you pay for your products with another credit card, then transfer that balance to the MBNA or BMO card for a 0 to 1% interest rate for 9 to 12 months. They can be a great option to use together or to combine with another loan, line of credit, or Medicard.</p>
+
+<div class="link-group">
+  <ul>
+    <li>0% MBNA Mastercard: <a href="https://www.mbna.ca/en/credit-cards/low-interest/true-line-mastercard?utm_source=fb&amp;utm_medium=cpm&amp;utm_campaign=23_D_CC_CTM_AO_ACQ_EN_NAT_EN&amp;utm_term=ACQ&amp;cid=fbd-paid&amp;dclid=CPnb6ozI9fwCFXMMdgYdpTsAWg" target="_blank" rel="noopener noreferrer">apply now</a></li>
+    <li>0.99% BMO Mastercard: <a href="https://www.bmo.com/main/personal/credit-cards/2-cashback-offers/" target="_blank" rel="noopener noreferrer">apply now</a></li>
+  </ul>
+</div>
+
+<h3>2. Loans</h3>
+
+<p>A loan is one of the most common ways any business gets up and running, because it's the quickest way to receive funds. You will pay interest, but the idea is to pay the loan off much faster as you build your business and start bringing in revenue. Here are our favorite options:</p>
+
+<div class="link-group">
+  <ul>
+    <li>GoPeer: low interest rates for good credit (you need 3+ years of credit history). <a href="https://gopeer.ca/" target="_blank" rel="noopener noreferrer">Apply now</a></li>
+    <li>Tangerine: <a href="https://www.tangerine.ca/en/products/borrowing/tangerine-line-of-credit/" target="_blank" rel="noopener noreferrer">apply for a line of credit</a></li>
+    <li>Borrowell: quick loans up to $20,000. <a href="https://borrowell.com/" target="_blank" rel="noopener noreferrer">Apply now</a></li>
+    <li>Fairstone: Canada's leading non-bank lender, with loans from $500 to $35,000. <a href="https://www.fairstone.ca/" target="_blank" rel="noopener noreferrer">Apply now</a></li>
+  </ul>
+</div>
+
+<h3>3. Your bank</h3>
+
+<p>If you have a good relationship with your bank, talk with them about what they can do. They could increase your current credit limit, open a new line of credit for you, or give you a loan!</p>
+
+<h3>4. Medicard</h3>
+
+<p><a href="https://www.medicard.com/" target="_blank" rel="noopener noreferrer">Medicard</a> does loans for medical equipment and works with Enagic regularly. We've had many people use them to get a quad or trifecta! Be aware that their interest rates can be quite high. You can negotiate and ask them to lower it. Most of their loans are for 5 or 6 years, so ideally you'd pay it off faster than that to pay less interest.</p>
+
+<a class="resource" href="https://vimeo.com/manage/videos/552665037/bcb03ef10f" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Video</div>
+    <div class="resource-name">How to apply for Medicard</div>
+    <div class="resource-desc">Ali walks you through the Medicard application.</div>
+  </div>
+  <span class="resource-open">Watch</span>
+</a>
+
+<div class="callout">
+  <strong>Good to know</strong>
+  <p>Medicard only asks for your employment information to confirm your income. They WILL NOT tell your boss or manager that you're starting a business (they aren't legally allowed to).</p>
+  <p>After Medicard approves you and gives you your interest rate, contact them by phone or email and ask for a lower rate. In many cases they'll lower it significantly, all you need to do is ask!</p>
+</div>
+
+
+<h2 id="australia">03 / Australia</h2>
+
+<h3>1. Credit cards</h3>
+
+<p>Skye Mastercard is 0% interest for 12 months. <a href="http://www.skyecard.com.au" target="_blank" rel="noopener noreferrer">Apply now</a></p>
+
+<h3>2. Banks</h3>
+
+<div class="link-group">
+  <ul>
+    <li><a href="https://www.commbank.com.au/" target="_blank" rel="noopener noreferrer">CommBank</a> offers fast, easy online applications with bankers who understand your local area.</li>
+    <li><a href="https://www.westpac.com.au/" target="_blank" rel="noopener noreferrer">Westpac</a> offers credit cards, loans and financing, plus industry-specific and business banking services.</li>
+  </ul>
+</div>
+
+<h3>3. Credit card finder</h3>
+
+<p>One more resource that could help you find an option that works for you: a website for comparing credit cards in Australia.</p>
+
+<a class="resource" href="https://www.finder.com.au/credit-cards" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Comparison site</div>
+    <div class="resource-name">Finder credit card comparison</div>
+    <div class="resource-desc">Compare 270+ credit cards in 60 seconds.</div>
+  </div>
+  <span class="resource-open">Open</span>
+</a>
+
+
+<h2 id="europe">04 / Europe (UK &amp; Ireland)</h2>
+
+<div class="callout honey">
+  <strong>Please take note</strong>
+  <p>In the UK, it's best to split your purchase between 2 cards. If you apply for 2 x &pound;5k at the same time, they won't realize you've got the other application in. Have 2 tabs open and click the final submit button on one right after the other.</p>
+  <p>There is currently no VAT on the product. It's added after purchase and paid when the product is delivered to your door. It varies a little but is around 20%: someone will arrive at your door and you'll pay the tax.</p>
+  <p>Check your credit: <a href="http://www.experian.co.uk" target="_blank" rel="noopener noreferrer">experian.co.uk</a></p>
+</div>
+
+<h3>1. Money Saving Expert <span class="score-tag">0% for 12 to 24 months</span></h3>
+
+<p>Go to the search box on <a href="https://www.moneysavingexpert.com/" target="_blank" rel="noopener noreferrer">moneysavingexpert.com</a> and type "0% money transfer." Most people are eligible if you have a job and have been living in the UK for a few years.</p>
+
+<p>There are cards with no interest for 12, 18, 24 and 36 months, with a very small fee. Usually the best choices are:</p>
+
+<div class="link-group">
+  <ul>
+    <li><a href="https://www.mbna.co.uk/" target="_blank" rel="noopener noreferrer">MBNA</a></li>
+    <li><a href="https://www.tescobank.com/" target="_blank" rel="noopener noreferrer">Tesco Bank</a></li>
+    <li><a href="https://uk.virginmoney.com/" target="_blank" rel="noopener noreferrer">Virgin Money</a></li>
+  </ul>
+</div>
+
+<h3>2. Money Supermarket</h3>
+
+<p><a href="http://Moneysupermarket.com" target="_blank" rel="noopener noreferrer">Moneysupermarket.com</a> offers loans, personal loans, and bad or refused credit loans, plus regular credit cards, credit building cards, 0% interest cards, cashback cards, bad credit cards and more.</p>
+
+<h3>3. Ireland</h3>
+
+<p>In Ireland, the best way to compare credit cards and loans is <a href="http://switcher.ie" target="_blank" rel="noopener noreferrer">switcher.ie</a> or <a href="http://bonkers.ie" target="_blank" rel="noopener noreferrer">bonkers.ie</a>. You can also apply through your own bank or the Credit Union.</p>
+
+
+<h2 id="credit-builder">05 / Credit builder (worldwide)</h2>
+
+<p>Our credit score and money mindset tool is ready, wherever you live.</p>
+
+<a class="resource" href="https://marinasoicher.github.io/credit-builder-plan/" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Credit building tool</div>
+    <div class="resource-name">Credit Builder Plan</div>
+    <div class="resource-desc">Our step-by-step plan for raising your credit score so you can get approved for financing.</div>
+  </div>
+  <span class="resource-open">Open</span>
+</a>
+
+
+<div class="next-step">
+  <div class="label">Need help?</div>
+  <h3>Your coach is here for you</h3>
+  <p>Once you've figured out your financing, your coach will email you the forms you need to get affiliated and get your products officially ordered. Questions along the way? Reach out to your coach on Telegram.</p>
+</div>
+
+
+<div style="text-align: center; margin: 48px 0 0;">
+  <img src="../email-signature.png" alt="Marina Soicher" style="width: 130px; height: auto; opacity: 0.95;">
+</div>
+<div class="footer" style="margin-top: 6px; padding-top: 10px;">
+  <div class="footer-meta">Financing Guide &middot; v1.0</div>
+</div>
+
+</body>
+</html>
