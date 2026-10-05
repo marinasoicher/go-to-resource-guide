@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launch Guide / Marina Soicher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --pearl: #FAF8F5;
+    --pearl-deep: #F2EDE5;
+    --pearl-warm: #ECE4D4;
+    --cacao: #2E1B14;
+    --cacao-soft: #4A3329;
+    --cacao-muted: #7A6359;
+    --espresso: #180D00;
+    --sky: #ABCDDD;
+    --sky-light: #DCE9F0;
+    --sky-deep: #7FA8BD;
+    --honey: #CEA435;
+    --honey-light: #F2E5BE;
+    --honey-deep: #A8851F;
+    --rule: #DDD2BF;
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--cacao);
+    background: var(--pearl);
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 64px 80px;
+  }
+
+  @media print {
+    body { padding: 36px; font-size: 13px; background: #fff; }
+    .no-print { display: none; }
+    h2 { page-break-before: always; }
+    .cover, h2:first-of-type { page-break-before: avoid; }
+    .step, .tool-card, .file-card, .callout, .code-block, .phase, .level-card { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 700px) {
+    body { padding: 24px 18px 60px; }
+
+    /* Cover */
+    .cover { padding: 24px 0 16px; margin-bottom: 16px; }
+    .cover .eyebrow { font-size: 10px; letter-spacing: 3px; margin-bottom: 18px; }
+    .cover h1 { font-size: 36px; letter-spacing: 0.5px; line-height: 1.1; margin-bottom: 16px; }
+    .cover .version { font-size: 9px; letter-spacing: 2.5px; margin-bottom: 18px; }
+    .cover .byline { font-size: 10px; letter-spacing: 2px; margin-bottom: 16px; }
+    .cover .subtitle { font-size: 17px; margin-bottom: 18px; line-height: 1.45; }
+    br.desktop-only { display: none; }
+    .cover .pills { gap: 6px; margin-bottom: 16px; }
+    .cover .promise { font-size: 15px; }
+
+    /* Device note */
+    .device-note { padding: 14px 16px; flex-direction: column; gap: 8px; }
+    .device-note-icon { font-size: 22px; }
+    .device-note-body strong { font-size: 16px; }
+
+    /* TOC */
+    .toc { padding: 22px 22px; margin-bottom: 36px; }
+    .toc ol { columns: 1; column-gap: 0; }
+    .toc li { font-size: 15px; gap: 10px; margin-bottom: 8px; }
+
+    /* Typography */
+    h2 { font-size: 10px; letter-spacing: 3px; margin: 36px 0 14px; }
+    h3 { font-size: 22px; margin: 22px 0 8px; }
+    h4 { font-size: 11.5px; }
+    p { font-size: 15.5px; }
+
+    /* Lead */
+    .lead { font-size: 17px; padding-left: 16px; }
+
+    /* Grids that should stack on mobile */
+    .tool-grid { grid-template-columns: 1fr; gap: 12px; }
+    .level-card { grid-template-columns: 1fr; gap: 10px; }
+    .legend { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Cards */
+    .tool-card { padding: 18px 18px; }
+    .tool-card .name { font-size: 24px; }
+    .file-card { padding: 18px 18px; }
+    .file-card .file-purpose { font-size: 20px; }
+
+    /* Phase blocks */
+    .phase { padding: 16px 18px; }
+    .phase-header { gap: 10px; margin-bottom: 12px; }
+    .phase-title { font-size: 18px; }
+
+    /* Steps */
+    .step { gap: 12px; margin-bottom: 16px; }
+    .step-num { width: 32px; height: 32px; font-size: 13px; }
+    .step-body .action { padding: 10px 14px; font-size: 12px; }
+
+    /* Callouts */
+    .callout { padding: 14px 16px; margin: 16px 0; }
+    .callout p { font-size: 15px; }
+
+    /* Folder tree & code blocks */
+    .folder-tree { padding: 16px 18px; font-size: 12px; line-height: 1.8; }
+    .code-block { padding: 14px 16px; font-size: 11px; }
+    .code-block.compact { padding: 12px 14px; font-size: 11px; }
+
+    /* Tables: tighten padding, smaller font */
+    table { font-size: 14px; }
+    th { padding: 10px 12px; font-size: 9.5px; letter-spacing: 1.2px; }
+    td { padding: 11px 12px; line-height: 1.5; }
+
+    /* Next-step card */
+    .next-step { padding: 24px 22px; margin: 28px 0; }
+    .next-step h3 { font-size: 26px; margin-bottom: 12px; }
+    .next-step p { font-size: 15px; line-height: 1.65; }
+  }
+
+  /* COVER */
+  .cover {
+    text-align: center;
+    padding: 44px 0 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cover::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: var(--sky-deep);
+    margin: 16px auto 0;
+  }
+  .cover .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .cover h1 {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 58px;
+    font-weight: 400;
+    color: var(--cacao);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .cover .version {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    border: 1px solid var(--honey-deep);
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .cover .byline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cacao-soft);
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .cover .subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    color: var(--cacao-soft);
+    margin-bottom: 24px;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+  .cover .pills {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .pill {
+    background: var(--cacao);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+  .pill.sky { background: var(--sky-deep); }
+  .pill.outline {
+    background: transparent;
+    border: 1px solid var(--cacao);
+    color: var(--cacao);
+  }
+  .cover .promise {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    color: var(--cacao-soft);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* TOC */
+  .device-note {
+    background: var(--honey-light);
+    border: 1px solid var(--honey);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 0 0 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .device-note-icon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .device-note-body strong {
+    display: block;
+    font-family: 'Forum', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+  .device-note-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cacao-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .toc {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 36px;
+    margin: 0 0 48px;
+    position: relative;
+  }
+  .toc::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 24px;
+    width: 60px;
+    height: 3px;
+    background: var(--sky);
+  }
+  .toc h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: var(--sky-deep);
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+  }
+  .toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 36px;
+  }
+  .toc li {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    color: var(--cacao);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    display: flex;
+    gap: 14px;
+    break-inside: avoid;
+  }
+  .toc li .num {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--honey-deep);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    min-width: 26px;
+    padding-top: 3px;
+  }
+  .toc li .later {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    background: var(--sky-light);
+    padding: 1px 7px;
+    border-radius: 100px;
+    margin-left: 6px;
+    font-weight: 500;
+    align-self: center;
+  }
+
+  /* TYPOGRAPHY */
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin: 48px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 600;
+  }
+  h3 {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin: 28px 0 10px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+  }
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cacao);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 18px 0 8px;
+  }
+  p {
+    margin-bottom: 12px;
+    color: var(--cacao);
+    font-size: 16px;
+  }
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--cacao);
+  }
+  strong { color: var(--cacao); font-weight: 600; }
+  em { color: var(--cacao-soft); font-style: italic; }
+
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    background: var(--pearl-deep);
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--honey-deep);
+    font-weight: 500;
+  }
+
+  /* LEAD */
+  .lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--cacao);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 22px;
+    padding-left: 22px;
+    border-left: 2px solid var(--sky);
+  }
+
+  /* TOOL CARDS */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0 28px;
+  }
+  .tool-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 22px 22px;
+    background: #FFFFFF;
+    position: relative;
+  }
+  .tool-card.primary {
+    border-color: var(--sky);
+    background: var(--sky-light);
+  }
+  .tool-card .tool-mark {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .tool-card .name {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--cacao);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .tool-card .tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .tool-card p {
+    font-size: 15px;
+    color: var(--cacao-soft);
+    line-height: 1.65;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* FILE CARDS */
+  .file-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 22px 26px;
+    background: #FFFFFF;
+    margin: 16px 0;
+    position: relative;
+  }
+  .file-card.optional {
+    background: var(--pearl-deep);
+    border-style: dashed;
+  }
+  .file-card .file-name {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--honey-deep);
+    background: var(--pearl-deep);
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .file-card.optional .file-name {
+    background: #FFFFFF;
+  }
+  .file-card .badge-optional {
+    display: inline-block;
+    background: var(--sky-light);
+    color: var(--sky-deep);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    font-weight: 600;
+    vertical-align: 3px;
+  }
+  .file-card .file-purpose {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+  .file-card .file-desc {
+    font-size: 15px;
+    color: var(--cacao-soft);
+    margin-bottom: 16px;
+    line-height: 1.65;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .file-card .file-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--honey-deep);
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* STEPS */
+  .steps { margin: 18px 0; }
+  .step {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--cacao);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .step-num.sky { background: var(--sky-deep); }
+  .step-num.honey { background: var(--honey); }
+  .step-num.outline {
+    background: var(--pearl);
+    color: var(--cacao);
+    border: 1.5px solid var(--cacao);
+  }
+  .step-body { flex: 1; }
+  .step-body h4 { margin-top: 0; margin-bottom: 6px; }
+  .step-body p { margin-bottom: 8px; font-size: 15px; }
+  .step-body .action {
+    background: var(--sky-light);
+    border-left: 2px solid var(--sky-deep);
+    padding: 12px 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--cacao);
+    border-radius: 0 4px 4px 0;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .step-body .action strong {
+    display: block;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  /* CALLOUTS */
+  .callout {
+    border-left: 2px solid var(--sky-deep);
+    background: var(--sky-light);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout.honey {
+    border-left-color: var(--honey-deep);
+    background: var(--honey-light);
+  }
+  .callout.cacao {
+    border-left-color: var(--cacao);
+    background: var(--pearl-deep);
+  }
+  .callout > strong:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sky-deep);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .callout.honey > strong:first-child { color: var(--honey-deep); }
+  .callout.cacao > strong:first-child { color: var(--cacao); }
+  .callout p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .callout p + p { margin-top: 10px; }
+
+  /* LEVEL CARD - for beginner vs seasoned routing */
+  .level-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .level-box {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+    background: #FFFFFF;
+  }
+  .level-box.beginner { border-left: 3px solid var(--sky-deep); }
+  .level-box.seasoned { border-left: 3px solid var(--honey-deep); }
+  .level-box .level-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .level-box.beginner .level-label { color: var(--sky-deep); }
+  .level-box.seasoned .level-label { color: var(--honey-deep); }
+  .level-box h4 {
+    font-family: 'Forum', serif;
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.3px;
+  }
+  .level-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cacao-soft);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* PHASE BLOCKS */
+  .phase {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 14px 0;
+    background: #FFFFFF;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .phase-badge {
+    background: var(--sky-deep);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .phase-badge.honey { background: var(--honey); color: var(--cacao); }
+  .phase-title {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--cacao);
+    letter-spacing: 0.3px;
+  }
+  .phase ul { margin: 0; }
+  .phase li { font-size: 15px; }
+
+  /* FOLDER TREE */
+  .folder-tree {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background: var(--espresso);
+    color: #ECE4D4;
+    padding: 22px 26px;
+    border-radius: 4px;
+    margin: 16px 0;
+    line-height: 1.9;
+  }
+  .folder-tree .folder { color: var(--honey); font-weight: 600; }
+  .folder-tree .file { color: var(--sky); }
+  .folder-tree .comment { color: #8B7E70; font-style: italic; }
+
+  /* CODE BLOCKS */
+  .code-block {
+    background: var(--espresso);
+    color: #ECE4D4;
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 14px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 11.5px;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  .code-block .label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .code-block.compact { font-size: 12px; padding: 14px 20px; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+  }
+  th {
+    background: var(--cacao);
+    color: var(--pearl);
+    padding: 13px 18px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    line-height: 1.6;
+    background: #FFFFFF;
+  }
+  tr:nth-child(even) td { background: var(--pearl-deep); }
+
+  /* DIVIDER */
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 36px 0;
+  }
+  .ornament {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--sky-deep);
+    font-family: 'Forum', serif;
+    font-size: 22px;
+    letter-spacing: 14px;
+  }
+
+  /* NEXT-STEP CARD */
+  .next-step {
+    background: var(--espresso);
+    color: var(--pearl);
+    border-radius: 4px;
+    padding: 32px 36px;
+    margin: 36px 0;
+    position: relative;
+  }
+  .next-step .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .next-step h3 {
+    font-family: 'Forum', serif;
+    color: var(--pearl);
+    font-size: 34px;
+    margin: 0 0 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+  }
+  .next-step p {
+    color: #DDD2BF;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .next-step ul { padding-left: 24px; }
+  .next-step li {
+    color: #DDD2BF;
+    font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .next-step strong { color: var(--pearl); }
+
+  /* SCREENSHOT FRAME & LEGEND */
+  .screenshot-frame {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px;
+    margin: 22px 0 10px;
+    box-shadow: 0 2px 16px rgba(46, 27, 20, 0.06);
+    text-align: center;
+  }
+  .screenshot-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+  .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+  .legend-item {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    background: #FFFFFF;
+  }
+  .legend-item .legend-label {
+    font-family: 'Forum', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--rule);
+    letter-spacing: 0.4px;
+  }
+  .legend-item .legend-label.chat { border-bottom-color: var(--honey); }
+  .legend-item .legend-label.cowork { border-bottom-color: var(--sky-deep); }
+  .legend-item .legend-label.code { border-bottom-color: var(--cacao); }
+  .legend-item p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--cacao-soft);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .footer-logo {
+    margin-bottom: 8px;
+  }
+  .footer-logo img {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+  }
+  .footer-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--cacao-muted);
+    margin-top: 10px;
+  }
+  .footer-meta strong { color: var(--sky-deep); font-weight: 600; }
+
+  /* RESOURCE LINK CARDS (added for this hub: the whole card is the link) */
+  .resource {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 12px 0;
+    background: #FFFFFF;
+    text-decoration: none;
+    color: var(--cacao);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .resource:hover { border-color: var(--sky-deep); background: var(--sky-light); }
+  .resource-body { flex: 1; }
+  .resource-name {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+  }
+  .resource-desc {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--cacao-soft);
+  }
+  .resource-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .resource-open {
+    flex-shrink: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--pearl);
+    background: var(--cacao);
+    padding: 9px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .resource:hover .resource-open { background: var(--sky-deep); }
+  @media (max-width: 700px) {
+    .resource { padding: 16px 16px; gap: 12px; }
+    .resource-name { font-size: 19px; }
+    .resource-desc { font-size: 14.5px; }
+    .resource-open { padding: 8px 12px; font-size: 9px; letter-spacing: 1.5px; }
+  }
+
+  /* Launch Guide additions */
+  .link-group { margin: 18px 0 8px; }
+  .link-group h4 { margin-bottom: 8px; }
+  .link-group ul { padding-left: 22px; margin: 0; }
+  .link-group li { margin-bottom: 4px; }
+  .link-group a, p a { color: var(--sky-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .toc li a { color: inherit; text-decoration: none; }
+  .toc li a:hover { color: var(--sky-deep); }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     LAUNCH GUIDE (replaces the "Step 1 | Launch Doc" Google Doc)
+     Sent to people after their 1:1 Business Set-Up Call.
+     Built from the Go To Guide's styling (BRAND/guide-template.html).
+     The Financing link still points to the old Financing Doc; swap
+     it for the Financing Guide once Naomi approves that guide.
+     v1.0 (2026-10-05): first draft for Naomi's review.
+============================================================ -->
+
+<div class="cover">
+  <div class="eyebrow">Marina's Team</div>
+  <h1>Launch Guide</h1>
+  <div class="version">v1.0</div>
+  <div class="byline">By Marina Soicher</div>
+  <p class="subtitle">You've had your Business Set-Up Call and you're ready to start. This guide is your next step: get your financing in place, get plugged into our community, and grow your mindset while your financing comes through.</p>
+</div>
+
+<div class="device-note">
+  <div class="device-note-icon">&#9733;</div>
+  <div class="device-note-body">
+    <strong>Bookmark this page</strong>
+    <p>This guide is always being updated, so come back to this link instead of saving a copy. Coming back for something specific? Tap any section below to jump straight to it.</p>
+  </div>
+</div>
+
+<div class="toc">
+  <h3>What's Inside</h3>
+  <ol>
+    <li><span class="num">01</span> <a href="#financing">Financing options</a></li>
+    <li><span class="num">02</span> <a href="#community">Get plugged into the community</a></li>
+    <li><span class="num">03</span> <a href="#during-financing">What to work on during financing</a></li>
+    <li><span class="num">04</span> <a href="#loved-ones">Unsupportive loved ones?</a></li>
+  </ol>
+</div>
+
+<div class="callout cacao">
+  <strong>From the founders</strong>
+  <p>We are so excited you're here and can't wait to get to know you more! The creators of Legacy Project made this Launch Guide to give you your exact next steps. We've condensed everything you need to know to get going, plus some extra tools if you're a go-getter and just can't wait to get started!</p>
+  <p>Now that you've had your Business Set-Up Call and decided that Legacy Project and Enagic will help you get from where you are now to where you want to be, the next step is to look at the different financing options to get started. As you work on getting your financing figured out, there are lots of things you can do to move your business forward and get a head start. Let's dive in!</p>
+</div>
+
+
+<h2 id="financing">01 / Financing options</h2>
+
+<p>Almost no one has $15k lying around, which is why we've gathered many amazing financing options so you can start your business. Your coach is here to support you through this entire process!</p>
+
+<a class="resource" href="https://docs.google.com/document/d/1jJWW_tjBN7AEgG0il7H789AZqdybk3D7LSorumEs09Y/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Start here</div>
+    <div class="resource-name">Financing Options</div>
+    <div class="resource-desc">Apply for the options here. Once you've figured out your financing, your coach will email you the forms you need to get affiliated and get your products officially ordered.</div>
+  </div>
+  <span class="resource-open">Open</span>
+</a>
+
+
+<h2 id="community">02 / Get plugged into the community</h2>
+
+<p>Please download the free app Telegram if you don't already have it. It's our main place for communication within our Legacy team and the community. Let your coach know once you've joined so they can connect with you on Telegram moving forward.</p>
+
+<a class="resource" href="https://t.me/+5f1UupeC-GAyMmQx" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Telegram chat</div>
+    <div class="resource-name">Wins Chat | Legacy Project</div>
+    <div class="resource-desc">Say hello and introduce yourself when you join! Taking the leap to learn about this business is your first win, and we want to celebrate you.</div>
+  </div>
+  <span class="resource-open">Join</span>
+</a>
+
+<p>When you introduce yourself, feel free to share where you're from, why you're so excited to start your business, and maybe even a photo of your fur babies or kids if you have them and are comfortable doing so. We are a family and love meeting and celebrating our new members!</p>
+
+<p>Moving forward, this chat is a place to share wins and be celebrated, which is KEY in our business for recognizing your milestones. We also use it to share takeaways from calls and spread excitement.</p>
+
+
+<h2 id="during-financing">03 / What to work on during financing</h2>
+
+<p class="lead">"I'm working on my financing, what else can I do now?!" We're so glad you asked!</p>
+
+<p>We've picked our favorite books and trainings to help you start building an entrepreneur mindset and learn more about our business. Mindset is what makes the difference between succeeding or not, so set aside at least 30 minutes each day to work on it. This is non-negotiable if you truly want to be successful!</p>
+
+<div class="link-group">
+  <h4>Money mindset book: Secrets of the Millionaire Mind by T. Harv Eker</h4>
+  <ul>
+    <li>Audiobook on Spotify: <a href="https://open.spotify.com/show/6QpBoYdpGmuXgsnJlM7pqW?si=bcf1f41a9abd4e58&amp;nd=1&amp;dlsi=43883120fb484a7c" target="_blank" rel="noopener noreferrer">USA</a> or <a href="https://open.spotify.com/episode/1LEOgG8LSAAWga1dg4seak?si=d1fdb09c80d54108" target="_blank" rel="noopener noreferrer">Canada</a></li>
+    <li><a href="https://bookaudiobook.net/secrets-of-the-millionaire-mind-audiobook/" target="_blank" rel="noopener noreferrer">Free audiobook</a></li>
+    <li><a href="https://drive.google.com/file/d/1XyoGsNHoUFdOW_XNd7Vgg86sacoxLGAO/view" target="_blank" rel="noopener noreferrer">Free PDF</a></li>
+  </ul>
+</div>
+
+<div class="link-group">
+  <h4>Mindset book: Outsmarting Reality by Nero Knowledge</h4>
+  <ul>
+    <li><a href="https://youtube.com/playlist?list=PLJ565fvCSQAkFQnJBR2Rdf1o0lP0bZY-x&amp;si=VZ7MVS-X6c9lQZJ9" target="_blank" rel="noopener noreferrer">Free audiobook on YouTube</a></li>
+    <li><a href="https://www.scribd.com/document/866789358/OceanofPDF-com-Outsmarting-Reality-Nero-Knowledge" target="_blank" rel="noopener noreferrer">Free PDF</a></li>
+  </ul>
+</div>
+
+<div class="link-group">
+  <h4>Favorite training recordings</h4>
+  <ul>
+    <li><a href="https://vimeo.com/877211848/25b5d92dc5?ts=108000" target="_blank" rel="noopener noreferrer">Compensation Plan Training with Shauna &amp; Natalie</a></li>
+    <li><a href="https://vimeo.com/1041208466/9a5ff6a3f2?share=copy" target="_blank" rel="noopener noreferrer">Mindset for 2025 &amp; Cycle of Success with Marina</a></li>
+    <li><a href="https://vimeo.com/948419690/d2565318a3?share=copy" target="_blank" rel="noopener noreferrer">Journey to 6A with Amanda &amp; Secada</a></li>
+    <li><a href="https://vimeo.com/888816184/057dda12b2" target="_blank" rel="noopener noreferrer">Social Media Tips &amp; Tricks with Samara</a></li>
+  </ul>
+</div>
+
+<div class="link-group">
+  <h4>Infographics: learn more about Kangen Water</h4>
+  <ul>
+    <li><a href="https://www.canva.com/design/DAGB4bNzGYU/9jZCIlUlzVkxCVdlwl7lAQ/edit?utm_content=DAGB4bNzGYU&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton" target="_blank" rel="noopener noreferrer">Cost/Savings Analysis Canva Graphic</a> (for copy only)</li>
+    <li><a href="https://docs.google.com/document/d/1q1Uc97V3mMCT3txjzkAr-q8CsMA-eDc8BwHkURnnCwA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Cost/Savings Analysis: Kangen Water vs Household Products</a></li>
+  </ul>
+</div>
+
+<div class="callout honey">
+  <strong>Keep in mind</strong>
+  <p>As soon as you and your business set up specialist send your forms to Enagic and your order is confirmed, you'll get access to the Business Launch Course (BLC) so you can dive in and get the foundation of your business up and running!</p>
+</div>
+
+
+<h2 id="loved-ones">04 / Unsupportive loved ones?</h2>
+
+<p>Sometimes in this business we're so excited, but we don't have support from our significant other or parents or loved ones. Usually what happens is we get excited and want to share, but they haven't seen the information. They want to protect you, so they start asking questions and seem skeptical.</p>
+
+<p>Just know that you are not alone. This happens to many people when they start their business. Our best advice: share your passion and excitement with your loved one, but don't try to convince them. When they see how happy and excited you are, they might be willing to say "I trust you" and sit back while you go after it.</p>
+
+<p>You also always have the option of sharing the Discovery Process with them if you feel they'd like to see it all laid out the way you did. This can be really helpful for getting husbands on board, because they can see it all for themselves.</p>
+
+<a class="resource" href="https://www.youtube.com/watch?v=-jJX4gFGQoA" target="_blank" rel="noopener noreferrer">
+  <div class="resource-body">
+    <div class="resource-type">Team call recording</div>
+    <div class="resource-name">Building Belief In Your Supportive Other And YOURSELF</div>
+    <div class="resource-desc">A team call on this exact subject, so you know you aren't alone if you're running into this.</div>
+  </div>
+  <span class="resource-open">Watch</span>
+</a>
+
+<p>Keep in mind that your loved ones almost always want what's best for you, so their fears can come out and seem unsupportive at first. But they almost always come around once they see your growth and passion in this business!</p>
+
+
+<div class="next-step">
+  <div class="label">Need help?</div>
+  <h3>Your coach is here for you</h3>
+  <p>If you have a question about anything in this guide, reach out to your coach on Telegram. We're so excited to have you here!</p>
+</div>
+
+
+<div style="text-align: center; margin: 48px 0 0;">
+  <img src="../email-signature.png" alt="Marina Soicher" style="width: 130px; height: auto; opacity: 0.95;">
+</div>
+<div class="footer" style="margin-top: 6px; padding-top: 10px;">
+  <div class="footer-meta">Launch Guide &middot; v1.0</div>
+</div>
+
+</body>
+</html>
