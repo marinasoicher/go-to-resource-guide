@@ -949,6 +949,9 @@
   .link-group a, p a { color: var(--sky-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
   .toc li a { color: inherit; text-decoration: none; }
   .toc li a:hover { color: var(--sky-deep); }
+  .book-covers { display: flex; justify-content: center; gap: 28px; margin: 22px 0 8px; }
+  .book-covers img { width: 130px; height: auto; border-radius: 3px; box-shadow: 0 2px 14px rgba(46, 27, 20, 0.15); }
+  @media (max-width: 700px) { .book-covers img { width: 110px; } .book-covers { gap: 18px; } }
 </style>
 </head>
 <body>
@@ -957,15 +960,15 @@
      LAUNCH GUIDE (replaces the "Step 1 | Launch Doc" Google Doc)
      Sent to people after their 1:1 Business Set-Up Call.
      Built from the Go To Guide's styling (BRAND/guide-template.html).
-     The Financing link still points to the old Financing Doc; swap
-     it for the Financing Guide once Naomi approves that guide.
      v1.0 (2026-10-05): first draft for Naomi's review.
+     v1.1 (2026-10-06): Naomi's feedback: book covers added, financing
+     card now points to the Financing Guide.
 ============================================================ -->
 
 <div class="cover">
   <div class="eyebrow">Marina's Team</div>
   <h1>Launch Guide</h1>
-  <div class="version">v1.0</div>
+  <div class="version">v1.1</div>
   <div class="byline">By Marina Soicher</div>
   <p class="subtitle">You've had your Business Set-Up Call and you're ready to start. This guide is your next step: get your financing in place, get plugged into our community, and grow your mindset while your financing comes through.</p>
 </div>
@@ -999,10 +1002,10 @@
 
 <p>Almost no one has $15k lying around, which is why we've gathered many amazing financing options so you can start your business. Your coach is here to support you through this entire process!</p>
 
-<a class="resource" href="https://docs.google.com/document/d/1jJWW_tjBN7AEgG0il7H789AZqdybk3D7LSorumEs09Y/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+<a class="resource" href="../financing-guide/" target="_blank" rel="noopener noreferrer">
   <div class="resource-body">
     <div class="resource-type">Start here</div>
-    <div class="resource-name">Financing Options</div>
+    <div class="resource-name">Financing Guide</div>
     <div class="resource-desc">Apply for the options here. Once you've figured out your financing, your coach will email you the forms you need to get affiliated and get your products officially ordered.</div>
   </div>
   <span class="resource-open">Open</span>
@@ -1032,6 +1035,11 @@
 <p class="lead">"I'm working on my financing, what else can I do now?!" We're so glad you asked!</p>
 
 <p>We've picked our favorite books and trainings to help you start building an entrepreneur mindset and learn more about our business. Mindset is what makes the difference between succeeding or not, so set aside at least 30 minutes each day to work on it. This is non-negotiable if you truly want to be successful!</p>
+
+<div class="book-covers">
+  <img src="secrets-of-the-millionaire-mind.jpg" alt="Secrets of the Millionaire Mind by T. Harv Eker">
+  <img src="outsmarting-reality.png" alt="Outsmarting Reality by Nero Knowledge">
+</div>
 
 <div class="link-group">
   <h4>Money mindset book: Secrets of the Millionaire Mind by T. Harv Eker</h4>
@@ -1105,7 +1113,7 @@
   <img src="../email-signature.png" alt="Marina Soicher" style="width: 130px; height: auto; opacity: 0.95;">
 </div>
 <div class="footer" style="margin-top: 6px; padding-top: 10px;">
-  <div class="footer-meta">Launch Guide &middot; v1.0</div>
+  <div class="footer-meta">Launch Guide &middot; v1.1</div>
 </div>
 
 </body>
