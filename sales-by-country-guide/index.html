@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales by Country Guide / Marina Soicher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --pearl: #FAF8F5;
+    --pearl-deep: #F2EDE5;
+    --pearl-warm: #ECE4D4;
+    --cacao: #2E1B14;
+    --cacao-soft: #4A3329;
+    --cacao-muted: #7A6359;
+    --espresso: #180D00;
+    --sky: #ABCDDD;
+    --sky-light: #DCE9F0;
+    --sky-deep: #7FA8BD;
+    --honey: #CEA435;
+    --honey-light: #F2E5BE;
+    --honey-deep: #A8851F;
+    --rule: #DDD2BF;
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--cacao);
+    background: var(--pearl);
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 64px 80px;
+  }
+
+  @media print {
+    body { padding: 36px; font-size: 13px; background: #fff; }
+    .no-print { display: none; }
+    h2 { page-break-before: always; }
+    .cover, h2:first-of-type { page-break-before: avoid; }
+    .step, .tool-card, .file-card, .callout, .code-block, .phase, .level-card { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 700px) {
+    body { padding: 24px 18px 60px; }
+
+    /* Cover */
+    .cover { padding: 24px 0 16px; margin-bottom: 16px; }
+    .cover .eyebrow { font-size: 10px; letter-spacing: 3px; margin-bottom: 18px; }
+    .cover h1 { font-size: 36px; letter-spacing: 0.5px; line-height: 1.1; margin-bottom: 16px; }
+    .cover .version { font-size: 9px; letter-spacing: 2.5px; margin-bottom: 18px; }
+    .cover .byline { font-size: 10px; letter-spacing: 2px; margin-bottom: 16px; }
+    .cover .subtitle { font-size: 17px; margin-bottom: 18px; line-height: 1.45; }
+    br.desktop-only { display: none; }
+    .cover .pills { gap: 6px; margin-bottom: 16px; }
+    .cover .promise { font-size: 15px; }
+
+    /* Device note */
+    .device-note { padding: 14px 16px; flex-direction: column; gap: 8px; }
+    .device-note-icon { font-size: 22px; }
+    .device-note-body strong { font-size: 16px; }
+
+    /* TOC */
+    .toc { padding: 22px 22px; margin-bottom: 36px; }
+    .toc ol { columns: 1; column-gap: 0; }
+    .toc li { font-size: 15px; gap: 10px; margin-bottom: 8px; }
+
+    /* Typography */
+    h2 { font-size: 10px; letter-spacing: 3px; margin: 36px 0 14px; }
+    h3 { font-size: 22px; margin: 22px 0 8px; }
+    h4 { font-size: 11.5px; }
+    p { font-size: 15.5px; }
+
+    /* Lead */
+    .lead { font-size: 17px; padding-left: 16px; }
+
+    /* Grids that should stack on mobile */
+    .tool-grid { grid-template-columns: 1fr; gap: 12px; }
+    .level-card { grid-template-columns: 1fr; gap: 10px; }
+    .legend { grid-template-columns: 1fr; gap: 12px; }
+
+    /* Cards */
+    .tool-card { padding: 18px 18px; }
+    .tool-card .name { font-size: 24px; }
+    .file-card { padding: 18px 18px; }
+    .file-card .file-purpose { font-size: 20px; }
+
+    /* Phase blocks */
+    .phase { padding: 16px 18px; }
+    .phase-header { gap: 10px; margin-bottom: 12px; }
+    .phase-title { font-size: 18px; }
+
+    /* Steps */
+    .step { gap: 12px; margin-bottom: 16px; }
+    .step-num { width: 32px; height: 32px; font-size: 13px; }
+    .step-body .action { padding: 10px 14px; font-size: 12px; }
+
+    /* Callouts */
+    .callout { padding: 14px 16px; margin: 16px 0; }
+    .callout p { font-size: 15px; }
+
+    /* Folder tree & code blocks */
+    .folder-tree { padding: 16px 18px; font-size: 12px; line-height: 1.8; }
+    .code-block { padding: 14px 16px; font-size: 11px; }
+    .code-block.compact { padding: 12px 14px; font-size: 11px; }
+
+    /* Tables: tighten padding, smaller font */
+    table { font-size: 14px; }
+    th { padding: 10px 12px; font-size: 9.5px; letter-spacing: 1.2px; }
+    td { padding: 11px 12px; line-height: 1.5; }
+
+    /* Next-step card */
+    .next-step { padding: 24px 22px; margin: 28px 0; }
+    .next-step h3 { font-size: 26px; margin-bottom: 12px; }
+    .next-step p { font-size: 15px; line-height: 1.65; }
+  }
+
+  /* COVER */
+  .cover {
+    text-align: center;
+    padding: 44px 0 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cover::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: var(--sky-deep);
+    margin: 16px auto 0;
+  }
+  .cover .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .cover h1 {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 58px;
+    font-weight: 400;
+    color: var(--cacao);
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .cover .version {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    border: 1px solid var(--honey-deep);
+    padding: 5px 16px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .cover .byline {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--cacao-soft);
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .cover .subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
+    color: var(--cacao-soft);
+    margin-bottom: 24px;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+  .cover .pills {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .pill {
+    background: var(--cacao);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+  .pill.sky { background: var(--sky-deep); }
+  .pill.outline {
+    background: transparent;
+    border: 1px solid var(--cacao);
+    color: var(--cacao);
+  }
+  .cover .promise {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    color: var(--cacao-soft);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* TOC */
+  .device-note {
+    background: var(--honey-light);
+    border: 1px solid var(--honey);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 0 0 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .device-note-icon {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .device-note-body strong {
+    display: block;
+    font-family: 'Forum', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+  .device-note-body p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cacao-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+  .toc {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px 36px;
+    margin: 0 0 48px;
+    position: relative;
+  }
+  .toc::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 24px;
+    width: 60px;
+    height: 3px;
+    background: var(--sky);
+  }
+  .toc h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 11px;
+    color: var(--sky-deep);
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 600;
+  }
+  .toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 36px;
+  }
+  .toc li {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 16px;
+    color: var(--cacao);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    display: flex;
+    gap: 14px;
+    break-inside: avoid;
+  }
+  .toc li .num {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--honey-deep);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    min-width: 26px;
+    padding-top: 3px;
+  }
+  .toc li .later {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    background: var(--sky-light);
+    padding: 1px 7px;
+    border-radius: 100px;
+    margin-left: 6px;
+    font-weight: 500;
+    align-self: center;
+  }
+
+  /* TYPOGRAPHY */
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin: 48px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 600;
+  }
+  h3 {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin: 28px 0 10px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+  }
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cacao);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 18px 0 8px;
+  }
+  p {
+    margin-bottom: 12px;
+    color: var(--cacao);
+    font-size: 16px;
+  }
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--cacao);
+  }
+  strong { color: var(--cacao); font-weight: 600; }
+  em { color: var(--cacao-soft); font-style: italic; }
+
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    background: var(--pearl-deep);
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--honey-deep);
+    font-weight: 500;
+  }
+
+  /* LEAD */
+  .lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--cacao);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 22px;
+    padding-left: 22px;
+    border-left: 2px solid var(--sky);
+  }
+
+  /* TOOL CARDS */
+  .tool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 20px 0 28px;
+  }
+  .tool-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 22px 22px;
+    background: #FFFFFF;
+    position: relative;
+  }
+  .tool-card.primary {
+    border-color: var(--sky);
+    background: var(--sky-light);
+  }
+  .tool-card .tool-mark {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .tool-card .name {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--cacao);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .tool-card .tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .tool-card p {
+    font-size: 15px;
+    color: var(--cacao-soft);
+    line-height: 1.65;
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* FILE CARDS */
+  .file-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 22px 26px;
+    background: #FFFFFF;
+    margin: 16px 0;
+    position: relative;
+  }
+  .file-card.optional {
+    background: var(--pearl-deep);
+    border-style: dashed;
+  }
+  .file-card .file-name {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--honey-deep);
+    background: var(--pearl-deep);
+    padding: 4px 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .file-card.optional .file-name {
+    background: #FFFFFF;
+  }
+  .file-card .badge-optional {
+    display: inline-block;
+    background: var(--sky-light);
+    color: var(--sky-deep);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    font-weight: 600;
+    vertical-align: 3px;
+  }
+  .file-card .file-purpose {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+  .file-card .file-desc {
+    font-size: 15px;
+    color: var(--cacao-soft);
+    margin-bottom: 16px;
+    line-height: 1.65;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .file-card .file-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: var(--honey-deep);
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* STEPS */
+  .steps { margin: 18px 0; }
+  .step {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--cacao);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .step-num.sky { background: var(--sky-deep); }
+  .step-num.honey { background: var(--honey); }
+  .step-num.outline {
+    background: var(--pearl);
+    color: var(--cacao);
+    border: 1.5px solid var(--cacao);
+  }
+  .step-body { flex: 1; }
+  .step-body h4 { margin-top: 0; margin-bottom: 6px; }
+  .step-body p { margin-bottom: 8px; font-size: 15px; }
+  .step-body .action {
+    background: var(--sky-light);
+    border-left: 2px solid var(--sky-deep);
+    padding: 12px 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--cacao);
+    border-radius: 0 4px 4px 0;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .step-body .action strong {
+    display: block;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--sky-deep);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  /* CALLOUTS */
+  .callout {
+    border-left: 2px solid var(--sky-deep);
+    background: var(--sky-light);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout.honey {
+    border-left-color: var(--honey-deep);
+    background: var(--honey-light);
+  }
+  .callout.cacao {
+    border-left-color: var(--cacao);
+    background: var(--pearl-deep);
+  }
+  .callout > strong:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sky-deep);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .callout.honey > strong:first-child { color: var(--honey-deep); }
+  .callout.cacao > strong:first-child { color: var(--cacao); }
+  .callout p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .callout p + p { margin-top: 10px; }
+
+  /* LEVEL CARD - for beginner vs seasoned routing */
+  .level-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .level-box {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 20px;
+    background: #FFFFFF;
+  }
+  .level-box.beginner { border-left: 3px solid var(--sky-deep); }
+  .level-box.seasoned { border-left: 3px solid var(--honey-deep); }
+  .level-box .level-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .level-box.beginner .level-label { color: var(--sky-deep); }
+  .level-box.seasoned .level-label { color: var(--honey-deep); }
+  .level-box h4 {
+    font-family: 'Forum', serif;
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.3px;
+  }
+  .level-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cacao-soft);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* PHASE BLOCKS */
+  .phase {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 14px 0;
+    background: #FFFFFF;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .phase-badge {
+    background: var(--sky-deep);
+    color: var(--pearl);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .phase-badge.honey { background: var(--honey); color: var(--cacao); }
+  .phase-title {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--cacao);
+    letter-spacing: 0.3px;
+  }
+  .phase ul { margin: 0; }
+  .phase li { font-size: 15px; }
+
+  /* FOLDER TREE */
+  .folder-tree {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background: var(--espresso);
+    color: #ECE4D4;
+    padding: 22px 26px;
+    border-radius: 4px;
+    margin: 16px 0;
+    line-height: 1.9;
+  }
+  .folder-tree .folder { color: var(--honey); font-weight: 600; }
+  .folder-tree .file { color: var(--sky); }
+  .folder-tree .comment { color: #8B7E70; font-style: italic; }
+
+  /* CODE BLOCKS */
+  .code-block {
+    background: var(--espresso);
+    color: #ECE4D4;
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 14px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 11.5px;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+  }
+  .code-block .label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .code-block.compact { font-size: 12px; padding: 14px 20px; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+  }
+  th {
+    background: var(--cacao);
+    color: var(--pearl);
+    padding: 13px 18px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 10.5px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+  td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    line-height: 1.6;
+    background: #FFFFFF;
+  }
+  tr:nth-child(even) td { background: var(--pearl-deep); }
+
+  /* DIVIDER */
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 36px 0;
+  }
+  .ornament {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--sky-deep);
+    font-family: 'Forum', serif;
+    font-size: 22px;
+    letter-spacing: 14px;
+  }
+
+  /* NEXT-STEP CARD */
+  .next-step {
+    background: var(--espresso);
+    color: var(--pearl);
+    border-radius: 4px;
+    padding: 32px 36px;
+    margin: 36px 0;
+    position: relative;
+  }
+  .next-step .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--honey);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .next-step h3 {
+    font-family: 'Forum', serif;
+    color: var(--pearl);
+    font-size: 34px;
+    margin: 0 0 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+  }
+  .next-step p {
+    color: #DDD2BF;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .next-step ul { padding-left: 24px; }
+  .next-step li {
+    color: #DDD2BF;
+    font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .next-step strong { color: var(--pearl); }
+
+  /* SCREENSHOT FRAME & LEGEND */
+  .screenshot-frame {
+    background: #FFFFFF;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px;
+    margin: 22px 0 10px;
+    box-shadow: 0 2px 16px rgba(46, 27, 20, 0.06);
+    text-align: center;
+  }
+  .screenshot-frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+  .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 16px 0 24px;
+  }
+  .legend-item {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    background: #FFFFFF;
+  }
+  .legend-item .legend-label {
+    font-family: 'Forum', serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--cacao);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--rule);
+    letter-spacing: 0.4px;
+  }
+  .legend-item .legend-label.chat { border-bottom-color: var(--honey); }
+  .legend-item .legend-label.cowork { border-bottom-color: var(--sky-deep); }
+  .legend-item .legend-label.code { border-bottom-color: var(--cacao); }
+  .legend-item p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--cacao-soft);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .footer-logo {
+    margin-bottom: 8px;
+  }
+  .footer-logo img {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+  }
+  .footer-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--cacao-muted);
+    margin-top: 10px;
+  }
+  .footer-meta strong { color: var(--sky-deep); font-weight: 600; }
+
+  /* RESOURCE LINK CARDS (added for this hub: the whole card is the link) */
+  .resource {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 18px 22px;
+    margin: 12px 0;
+    background: #FFFFFF;
+    text-decoration: none;
+    color: var(--cacao);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .resource:hover { border-color: var(--sky-deep); background: var(--sky-light); }
+  .resource-body { flex: 1; }
+  .resource-name {
+    font-family: 'Forum', Georgia, serif;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+  }
+  .resource-desc {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--cacao-soft);
+  }
+  .resource-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--honey-deep);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .resource-open {
+    flex-shrink: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--pearl);
+    background: var(--cacao);
+    padding: 9px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .resource:hover .resource-open { background: var(--sky-deep); }
+  @media (max-width: 700px) {
+    .resource { padding: 16px 16px; gap: 12px; }
+    .resource-name { font-size: 19px; }
+    .resource-desc { font-size: 14.5px; }
+    .resource-open { padding: 8px 12px; font-size: 9px; letter-spacing: 1.5px; }
+  }
+
+  /* Guide additions (shared with the Launch Guide) */
+  .link-group { margin: 18px 0 8px; }
+  .link-group h4 { margin-bottom: 8px; }
+  .link-group ul { padding-left: 22px; margin: 0; }
+  .link-group li { margin-bottom: 4px; }
+  .link-group a, p a { color: var(--sky-deep); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .toc li a { color: inherit; text-decoration: none; }
+  .toc li a:hover { color: var(--sky-deep); }
+  .book-covers { display: flex; justify-content: center; gap: 28px; margin: 22px 0 8px; }
+  .book-covers img { width: 130px; height: auto; border-radius: 3px; box-shadow: 0 2px 14px rgba(46, 27, 20, 0.15); }
+  @media (max-width: 700px) { .book-covers img { width: 110px; } .book-covers { gap: 18px; } }
+</style>
+</head>
+<body>
+<!-- ============================================================
+     SALES BY COUNTRY GUIDE (replaces the "SALES PROCESSES BY
+     COUNTRY" Google Doc). Forms, pricing, payment, and financing
+     options for each country we sell in.
+     v1.0 (2026-10-07): first draft for Naomi's review. One line
+     from the US section ("add 60k projected income" on credit
+     card applications) is held back pending Naomi + Marina.
+============================================================ -->
+
+<div class="cover">
+  <div class="eyebrow">Marina's Team</div>
+  <h1>Sales by Country Guide</h1>
+  <div class="version">v1.0</div>
+  <div class="byline">By Marina Soicher</div>
+  <p class="subtitle">Where your buyer lives changes how the sale works. Find their country below for where to send forms, which forms you need, how they can pay, and the financing options to try.</p>
+</div>
+
+<div class="device-note">
+  <div class="device-note-icon">&#9733;</div>
+  <div class="device-note-body">
+    <strong>Bookmark this page</strong>
+    <p>This guide is always being updated, so come back to this link instead of saving a copy. Tap a country below to jump straight to it.</p>
+  </div>
+</div>
+
+<div class="toc">
+  <h3>What's Inside</h3>
+  <ol>
+    <li><span class="num">01</span> <a href="#usa">USA</a></li>
+    <li><span class="num">02</span> <a href="#canada">Canada</a></li>
+    <li><span class="num">03</span> <a href="#europe">Europe and the UK</a></li>
+    <li><span class="num">04</span> <a href="#australia">Australia</a></li>
+    <li><span class="num">05</span> <a href="#new-zealand">New Zealand</a></li>
+    <li><span class="num">06</span> <a href="#template">Adding a new country</a></li>
+  </ol>
+</div>
+
+<p>For the step-by-step of placing the order (forms tools, verbiage, and the Enagic email template), see the <a href="../submitting-a-sale-guide/" target="_blank" rel="noopener noreferrer">Submitting a Sale Guide</a>.</p>
+
+
+<h2 id="usa">01 / USA</h2>
+
+<table>
+  <tr><th>Send forms to</th><td><a href="mailto:goc.usa@enagic.com">goc.usa@enagic.com</a></td></tr>
+  <tr><th>Pricing</th><td>EWS tax calculator</td></tr>
+  <tr><th>Forms</th><td>EWS &gt; Enagic Forms &gt; US</td></tr>
+  <tr><th>How customers pay</th><td>Credit card, debit card, or cheque</td></tr>
+  <tr><th>All products available?</th><td>Yes</td></tr>
+</table>
+
+<h4>Forms for a Trifecta</h4>
+<ul>
+  <li>Anespa: Product Order Form and Distributor Application</li>
+  <li>K8: Order Form (User Only)</li>
+  <li>Ukon: Ukon Order Form and Distributor Application, Single Payment</li>
+  <li>Return Policy Form</li>
+  <li>W9 Form</li>
+</ul>
+
+<h3>Doing an online order</h3>
+<div class="link-group">
+  <ul>
+    <li>Online order, <a href="https://vimeo.com/687796254/04c1be4d0f" target="_blank" rel="noopener noreferrer">part 1</a> and <a href="https://vimeo.com/manage/videos/688136425/c5172d358d" target="_blank" rel="noopener noreferrer">part 2</a></li>
+    <li><a href="https://vimeo.com/687799287/2b89494b67" target="_blank" rel="noopener noreferrer">Selling to yourself / completing a Trifecta or Quad</a></li>
+    <li><a href="https://vimeo.com/1064437859" target="_blank" rel="noopener noreferrer">Processing the entire sale for a lead in the online system</a></li>
+    <li><a href="https://drive.google.com/file/d/1v5ZTfcRzw75vL0EC80RJtSEnUwt5QKfb/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Blank credit card form</a></li>
+  </ul>
+</div>
+
+<h3>Before you start applications, ask</h3>
+<div class="steps">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h4>Do you have any credit cards with spending available?</h4>
+      <p>If yes, which cards and how much is available? Don't offer a 0% card through a bank they already have a card with, because they won't get the 0% introductory offer. If they have spending available on current cards, they can use that: get a new 0% balance transfer card and transfer the balance.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h4>Who do you bank with?</h4>
+      <p>If their score is good but they aren't getting approved after a couple of card applications, check their personal bank for 0% card offers or low-interest personal loans. This can increase approval because they already have a relationship with that bank.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h4>Do you have a 401k or Roth IRA to pull from?</h4>
+    </div>
+  </div>
+</div>
+<p>On credit card applications, ask for combined household income.</p>
+
+<h3>Credit card options by score</h3>
+<div class="link-group">
+  <h4>700+</h4>
+  <ul>
+    <li><a href="https://www.discover.com/credit-cards/cash-back/it-card.html" target="_blank" rel="noopener noreferrer">Discover</a></li>
+    <li><a href="https://www.capitalone.com/credit-cards/quicksilver/" target="_blank" rel="noopener noreferrer">Capital One Quicksilver</a></li>
+    <li><a href="https://creditcards.wellsfargo.com/cards/reflect-visa-credit-card/?product_code=CC&amp;subproduct_code=VV&amp;FPID=013000IGF80000&amp;vendor_code=LS&amp;sub_channel=AFF&amp;siteID=apU41Q078Xo-ek.ZlmWxk06qimSLuYU90A" target="_blank" rel="noopener noreferrer">Wells Fargo 0% 21 months</a></li>
+    <li><a href="https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited" target="_blank" rel="noopener noreferrer">Chase Freedom Unlimited</a></li>
+    <li><a href="https://www.capitalone.com/credit-cards/cash-back/savor/" target="_blank" rel="noopener noreferrer">Capital One Savor</a></li>
+    <li><a href="https://www.capitalone.com/credit-cards/travel-and-miles/" target="_blank" rel="noopener noreferrer">Capital One Venture</a></li>
+    <li><a href="https://www.capitalone.com/credit-cards/preapprove/lp/sem/quicksilver/" target="_blank" rel="noopener noreferrer">Capital One pre-approval</a></li>
+    <li><a href="https://www.usbank.com/credit-cards/visa-platinum-credit-card.html" target="_blank" rel="noopener noreferrer">US Bank Platinum 0% 21 months</a></li>
+    <li><a href="https://creditcards.chase.com/balance-transfer-credit-cards/slate/edge" target="_blank" rel="noopener noreferrer">Chase Slate Edge</a></li>
+    <li><a href="https://www.citi.com/credit-cards/citi-diamond-preferred-credit-card" target="_blank" rel="noopener noreferrer">Citi Diamond Preferred (low intro APR)</a></li>
+  </ul>
+</div>
+<div class="link-group">
+  <h4>650-700</h4>
+  <ul>
+    <li><a href="https://online.citi.com/US/ag/cards/pre-qualify" target="_blank" rel="noopener noreferrer">Citi: see which cards you pre-qualify for</a></li>
+    <li><a href="https://web.secure.wellsfargo.com/credit-cards/yourinfo/" target="_blank" rel="noopener noreferrer">Wells Fargo: check for pre-qualified offers</a></li>
+  </ul>
+</div>
+<div class="link-group">
+  <h4>Below 630</h4>
+  <ul>
+    <li><a href="https://www.capitalone.com/credit-cards/platinum/" target="_blank" rel="noopener noreferrer">Capital One Platinum</a></li>
+    <li><a href="https://www.creditonebank.com/credit-cards/platinum-visa*" target="_blank" rel="noopener noreferrer">Credit One Platinum</a></li>
+    <li><a href="https://www.creditkarma.com/reviews/credit-card/single/id/CCProsper01" target="_blank" rel="noopener noreferrer">Credit Karma Prosper Card</a></li>
+  </ul>
+</div>
+<div class="link-group">
+  <h4>Credit-building cards</h4>
+  <ul>
+    <li><a href="https://www.capitalone.com/credit-cards/preapprove/lp/sem/lp2/?external_id=WWW_XXXXX_ZZZ_ONL-SE_ZZZZZ_T_SEM2_ZZZZ_c_Zg_3952b3b2-3b62-4da9-b54c-a4b9205e8d16_597785180794_759801&amp;target_id=kwd-253571909&amp;oC=CO5w44SUmn&amp;gad=1&amp;gclid=CjwKCAjwq4imBhBQEiwA9Nx1Buil6lBNFsvbc0gl8VW717KM_fcWm1Mxj3OO1lup-j7yBz93PHpaaRoCZHkQAvD_BwE" target="_blank" rel="noopener noreferrer">Capital One Credit Builder</a> (no hard check, gives multiple options)</li>
+    <li><a href="https://www.chime.com/apply-credit-af/?ad=cj&amp;value_prop=cb-dd&amp;CJEVENT=6db9cedc2ce711ee83f2023d0a82b832&amp;pid=1469133&amp;SID=131a66b8042942888dced697f3d18921&amp;AID=15023727&amp;clickid=6db9cedc2ce711ee83f2023d0a82b832&amp;cjdata=MXxOfDB8WXww" target="_blank" rel="noopener noreferrer">Chime Credit Builder</a></li>
+    <li><a href="https://www.openskycc.com/" target="_blank" rel="noopener noreferrer">OpenSky Credit Builder</a></li>
+  </ul>
+</div>
+
+<h3>Loan options for scores 620-690</h3>
+<p>These go by personal income only, not household income.</p>
+<ul>
+  <li>Upstart</li>
+  <li>Avant</li>
+  <li>LendingTree</li>
+  <li>Best Egg</li>
+</ul>
+
+<div class="callout honey">
+  <strong>Score 620 or lower?</strong>
+  <p>Point them to the credit builder tool: <a href="https://drive.google.com/drive/folders/1yGOmadaCt712sXaOB2GcHSt1-xX21HSa?usp=sharing" target="_blank" rel="noopener noreferrer">Credit Building E-book</a>.</p>
+</div>
+
+<h3>Affiliating as an LLC</h3>
+<ul>
+  <li>Only put the LLC name on the forms, not their personal name</li>
+  <li>Put the EIN instead of the SSN</li>
+  <li>They'll need to send their Articles of Incorporation and SS4</li>
+</ul>
+
+
+<h2 id="canada">02 / Canada</h2>
+
+<table>
+  <tr><th>Send forms to</th><td><a href="mailto:goc.can@enagic.com">goc.can@enagic.com</a></td></tr>
+  <tr><th>Pricing</th><td>EWS tax calculator for the Anespa and K8. The Ukon price is under Forms &gt; Canada &gt; English Forms &gt; Price List.</td></tr>
+  <tr><th>Forms</th><td>EWS &gt; Enagic Forms &gt; Canada</td></tr>
+  <tr><th>How customers pay</th><td>Credit card, Visa Debit, or certified cheque (made out to Enagic Canada Corp, mailed to the home office address)</td></tr>
+  <tr><th>All products available?</th><td>No, Ukon capsules aren't available</td></tr>
+</table>
+
+<h4>Forms for a Trifecta</h4>
+<p>Each order form has the NSM, a financing application (leave it blank), and the return policy attached. Your lead only needs to sign the NSM form and return policy form once.</p>
+<ul>
+  <li>Anespa: Product Order Form and Payment App for an Individual</li>
+  <li>K8: Product Order Form (User Only)</li>
+  <li>Ukon: Ukon Sigma Order Form</li>
+  <li>Return Policy</li>
+  <li>A picture of their driver's license must be included in the email</li>
+</ul>
+
+<h3>Financing</h3>
+<p>In Canada, the best options to start with are <strong>Medicard</strong> and <strong>MBNA</strong>.</p>
+<p>Start with Medicard, because you can apply on the call with your lead and get a pre-approval, so you know how much you have to work with to get them started. Start filling out their forms with them on the call once the pre-approval comes through. Someone from Medicard will contact them to complete the approval, and your lead tells Medicard which product package they want to start with. It works well for most scores of 600 and above.</p>
+<p>Then try the other options below if needed, to get more funding to complete a Trifecta.</p>
+
+<div class="link-group">
+  <h4>Financing options for scores above 620</h4>
+  <ul>
+    <li>Line of credit from their bank for personal medical equipment (not a business loan)</li>
+    <li>Medicard (they need to be currently working, otherwise have their spouse apply). Always ask for a lower interest rate than what's offered.</li>
+    <li>Go Peer loan</li>
+    <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwiis4CnmIyIAxWK0sIEHYMfMQ8YABAEGgJwdg&amp;co=1&amp;gclid=CjwKCAjw5qC2BhB8EiwAvqa41hAW2W3cD_ucdobXTHDaIXpEpa1W1i6Qp3iW-d9jaYZYDAxmoYzQoBoCyHYQAvD_BwE&amp;sph&amp;ohost=www.google.com&amp;cid=CAESwQHg9iPX8DgsuhfZEDqwQCh-JnH2GMOFme5WskTQrfIOiGHaoC61NQ6XOEhWv6C5BXUlRcN2XJdgrDYrElLscyAuHL-eDaDqGybu8THDs72-S9BLRLaN2RPmlNyI0MRZTBGgzDIwLKu3zWs5NwlA80Y2JvI_tKSwexmCUmZt1azYRb_AwODkqjZY2rbmEmHt-3udVpCJwxW7LYKYvH3giBMIBCso0pOvxBIu2eato98r4VvNKRgOD43Dg1gPFYzx-MFU&amp;sig=AOD64_2UmCZAQjHkHsgJl6jTnZ8G5V91GQ&amp;q&amp;adurl&amp;ved=2ahUKEwjy5_qmmIyIAxWdGDQIHZcZO7oQ0Qx6BAgLEAE" target="_blank" rel="noopener noreferrer">MBNA 0% balance transfer card</a> (3% transfer fee). They can transfer off another credit card, and can also transfer the balance they're approved for to their chequing account.</li>
+    <li><a href="https://www.springfinancial.ca/" target="_blank" rel="noopener noreferrer">Spring Financial</a></li>
+    <li><a href="https://www.bmo.com/main/personal/credit-cards/bmo-cashback-mastercard/" target="_blank" rel="noopener noreferrer">BMO 0% card</a></li>
+    <li><a href="https://www.easyfinancial.com/" target="_blank" rel="noopener noreferrer">Easy Financial</a></li>
+    <li><a href="https://www.tangerine.ca/en/personal/borrow/line-of-credit" target="_blank" rel="noopener noreferrer">Tangerine line of credit</a></li>
+    <li><a href="https://www.scotiabank.com/ca/en/personal/credit-cards/visa/value-card.html" target="_blank" rel="noopener noreferrer">Scotiabank Value Visa</a></li>
+  </ul>
+</div>
+
+<div class="callout honey">
+  <strong>Score 600 or lower?</strong>
+  <p>Point them to the credit builder tool created by our platform: <a href="https://lsopgz2gkme.typeform.com/creditbuilder" target="_blank" rel="noopener noreferrer">Credit Builder</a>.</p>
+</div>
+
+<h3>Affiliating as a corporation</h3>
+<ul>
+  <li>Only put the corporation's name on the forms, not their personal name</li>
+  <li>They'll need to send their Articles of Incorporation along with the forms</li>
+</ul>
+
+
+<h2 id="europe">03 / Europe and the UK</h2>
+
+<table>
+  <tr><th>Send forms to</th><td><a href="mailto:goc.eu@enagic.com">goc.eu@enagic.com</a></td></tr>
+  <tr><th>Pricing</th><td>EWS tax calculator for all products</td></tr>
+  <tr><th>Forms</th><td>EWS &gt; Enagic Forms &gt; EU</td></tr>
+  <tr><th>Order online?</th><td>Possible, but not recommended</td></tr>
+  <tr><th>How customers pay</th><td>Wire transfer, Visa, Mastercard, or Amex</td></tr>
+  <tr><th>All products available?</th><td>Ukon Soap isn't available</td></tr>
+</table>
+
+<h4>Forms for a Trifecta, single payment</h4>
+<ul>
+  <li>Anespa: Product Order Form</li>
+  <li>K8: Product Order Form</li>
+  <li>Ukon Sigma and DD Order Form</li>
+  <li>Distributor Agreement Form</li>
+  <li>Photo ID</li>
+</ul>
+
+<h4>Forms for Enagic financing (only one machine and one Ukon can be financed)</h4>
+<ul>
+  <li>Product Order Form (fill out the "For E-Payment Customers" box)</li>
+  <li>Ukon Sigma and DD Order Form (fill out the "For E-Payment Customers" section)</li>
+  <li>E-Payment Application for machines</li>
+  <li>E-Payment Application for Ukon</li>
+  <li>Copy of the applicant's photo ID</li>
+</ul>
+
+<h3>Financing</h3>
+<p>Credit scores aren't black and white in Europe, so ask things like "Do you already have debt?" and "Have you missed any payments recently?"</p>
+<div class="link-group">
+  <h4>For Europe</h4>
+  <ul>
+    <li>Line of credit from their bank for personal medical equipment</li>
+    <li>Enagic financing</li>
+  </ul>
+</div>
+<div class="link-group">
+  <h4>For the UK only</h4>
+  <ul>
+    <li><strong>Money Saving Expert</strong> (0% for 12-24 months): go to the search box on <a href="https://www.moneysavingexpert.com/" target="_blank" rel="noopener noreferrer">moneysavingexpert.com</a> and type "0% money transfer." There are cards with no interest for 12, 18, 24, and 36 months, with a very small fee. Usually the best choices are MBNA, Virgin, and Tesco.</li>
+    <li>Money Supermarket</li>
+    <li>Enagic financing</li>
+  </ul>
+</div>
+
+<div class="callout">
+  <strong>Good to know</strong>
+  <p>Rates in the tax calculator only show in euros, so make that clear to the applicant so they can convert to pounds if needed.</p>
+  <p>Great Britain and UK orders don't pay VAT during the sales process, but let them know they'll need to pay it to DHL when they receive their products. If a customer is paying through their company, they won't need to pay the VAT.</p>
+</div>
+
+
+<h2 id="australia">04 / Australia</h2>
+
+<table>
+  <tr><th>Send forms to</th><td><a href="mailto:goc.aus@enagic.com">goc.aus@enagic.com</a></td></tr>
+  <tr><th>Pricing</th><td><a href="http://www.enagic-australia.com" target="_blank" rel="noopener noreferrer">enagic-australia.com</a></td></tr>
+  <tr><th>Forms</th><td>Distributors &gt; Paperwork (password: enagic2017)</td></tr>
+  <tr><th>Order online?</th><td>Yes, as a consumer only, at <a href="http://www.store.enagic.com/au/home/" target="_blank" rel="noopener noreferrer">store.enagic.com/au</a>. You'll need a sponsor ID number to purchase a machine only.</td></tr>
+  <tr><th>Good to know</th><td>Only Ukon DD is available in Australia</td></tr>
+</table>
+
+<h4>Forms for a Trifecta</h4>
+<ul>
+  <li>Anespa: Product Order Form Distributor</li>
+  <li>K8: Product Order Form Consumer</li>
+  <li>Ukon DD Capsule and Soap Order Form, or Ukon DD Tea Autorenewal</li>
+  <li>Return Policy</li>
+  <li>Signed Policies and Procedures</li>
+  <li>Copy of driver's licence or passport</li>
+</ul>
+
+<h4>If doing Enagic financing</h4>
+<ul>
+  <li>E-Payment Agreement</li>
+  <li>Proof of address document</li>
+  <li>Clear copy of the front and back of the credit or debit card making the monthly payments, or a direct debit request form</li>
+  <li>Copy of driver's licence or passport</li>
+</ul>
+
+<h3>Financing</h3>
+<ol>
+  <li><a href="https://www.ausloans.com.au/partner/thelegacyblueprint" target="_blank" rel="noopener noreferrer">Ausloans</a></li>
+  <li><a href="https://www.hummloan.com/" target="_blank" rel="noopener noreferrer">humm financing</a> (partnered with Enagic)</li>
+</ol>
+<p>All the information on how to apply is under Distributors &gt; Paperwork at <a href="http://www.enagic-australia.com" target="_blank" rel="noopener noreferrer">enagic-australia.com</a>.</p>
+
+
+<h2 id="new-zealand">05 / New Zealand</h2>
+
+<table>
+  <tr><th>Send forms to</th><td><a href="mailto:goc.aus@enagic.com">goc.aus@enagic.com</a></td></tr>
+  <tr><th>Pricing</th><td><a href="http://www.enagic-australia.com" target="_blank" rel="noopener noreferrer">enagic-australia.com</a></td></tr>
+  <tr><th>Forms</th><td>Distributors &gt; Paperwork (password: enagic2017)</td></tr>
+  <tr><th>Order online?</th><td>No</td></tr>
+  <tr><th>Financing</th><td>Their own credit card or a bank loan</td></tr>
+  <tr><th>Good to know</th><td>Only Ukon DD is available in New Zealand</td></tr>
+</table>
+
+<h4>Forms for a Trifecta</h4>
+<ul>
+  <li>Anespa: Product Order Form Distributor</li>
+  <li>K8: Product Order Form Consumer</li>
+  <li>Ukon DD Capsule and Soap Order Form, or Ukon DD Tea Autorenewal</li>
+  <li>Return Policy</li>
+  <li>Signed Policies and Procedures</li>
+  <li>Copy of driver's licence or passport</li>
+</ul>
+
+<h4>If doing Enagic financing</h4>
+<ul>
+  <li>E-Payment Agreement</li>
+  <li>Proof of address document</li>
+  <li>Clear copy of the front and back of the credit or debit card making the monthly payments, or a direct debit request form</li>
+  <li>Copy of driver's licence or passport</li>
+  <li>Guarantor form, if requested</li>
+</ul>
+
+
+<h2 id="template">06 / Adding a new country</h2>
+
+<p>Selling somewhere new? Gather these answers for that country, then send them to Naomi so it can be added here.</p>
+<ul>
+  <li>Where to send forms</li>
+  <li>Where to check pricing</li>
+  <li>Where the forms are found</li>
+  <li>Which forms are needed for a Trifecta</li>
+  <li>Which extra forms are needed for Enagic financing</li>
+  <li>Can we order online? If so, how?</li>
+  <li>Financing options for scores above 690, 650-690, and below 650</li>
+  <li>Are all products available?</li>
+  <li>Anything else important to know</li>
+</ul>
+
+
+<div class="next-step">
+  <div class="label">Need help?</div>
+  <h3>We're here for you</h3>
+  <p>If you can't find the answer here, call or email Enagic for that country, then reach out to Naomi on Telegram.</p>
+</div>
+
+
+<div style="text-align: center; margin: 48px 0 0;">
+  <img src="../email-signature.png" alt="Marina Soicher" style="width: 130px; height: auto; opacity: 0.95;">
+</div>
+<div class="footer" style="margin-top: 6px; padding-top: 10px;">
+  <div class="footer-meta">Sales by Country Guide &middot; v1.0</div>
+</div>
+
+</body>
+</html>
